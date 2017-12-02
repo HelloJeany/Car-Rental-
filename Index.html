@@ -1,47 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-
-</head>
-
-
-<body>
-
-<h1>Speedy's Rental Form</h1>
-<p id="bName"></p>
-
-
-<h4>Renters Name</h4>
-<form>
-    <input type="text" name="fullName" placeholder="Jeanykay Simon" required="">
-</form>
-
-
-<br>
-<h4>Car Types</h4>
-<select id="types">
     
-</select>
-
-<h4>Availability:</h4>
-<span id="carAvail"></span>
-<h4>Price:</h4>
-<span id="carPrice"></span>
-
-<button id="rentCar">Rent Car! </button>
-
-<!--verison 1 updated
-<!--<h3>Economy Cars Available</h3>-->
-<!--<p id="ecoCarsAvail"></p>-->
-<!--<h3>Midsize Cars Available</h3>-->
-<!--<p id="midCarsAvail"></p>-->
-
-<!--<button onclick="update()">Update Availability</button>-->
-<!--<button onclick="getMid()">Rent Out 1 Midsize Car</button>-->
-<!--<button onclick="getEco()">Rent Out 1 Economy Car</button>-->
-
-<script type="text/javascript" src="Index.js"></script>
-
+    <title>Jeanykay's Car Rental Form</title>
+</head>
+<body>
+   <h1>Jeanykay's Car Reservation</h1>
+    <h2 id="bizName"></h2>
+    
+    <form id="reservationForm">
+        <label>Renter Name</label><br>
+        
+    <input type="text" name="fullName" placeholder="Jeanykay Simon" required="">
+        <!--<input type="text" id="renterName" required></input><br><br>-->
+        <div id="carSelection">
+            <label>Car Type</label><br>
+            <select id="dropdown" required>
+                <option disabled selected value="">Choose Vehicle</option> 
+            </select>
+        </div>
+        
+        <div id="carInfo">
+            <h2>Car Info</h2>
+            <p>Available: <span id="available"></span></p>
+            <p>Price: <span id="price"></span></p>
+        </div>
+        <br>
+        
+        <button onclick="carBooked()">Submit</button>
+    </form>
+    <script src="Index.js"></script>
 </body>
 </html>
